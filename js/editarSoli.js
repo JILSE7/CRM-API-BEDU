@@ -57,6 +57,7 @@ import { mostrarAlerta, validar } from './funciones.js'
         editarSoli(solicitud, idSolicitud);
 
 
+
     }
 
 })();

@@ -214,6 +214,7 @@ export const editarSoli = async(solicitud, id) => {
             }
         });
         console.log('actualizado');
+        window.location.href = 'solicitudes.html'
     } catch (error) {
         console.log(error);
     }
