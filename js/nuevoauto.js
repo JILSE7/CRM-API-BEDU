@@ -60,7 +60,10 @@ import { nuevoAuto } from './API.js'
 
         nuevoAuto(auto);
         formulario.reset();
-        // window.location.href = 'autos.html';
+        setTimeout(() => {
+            window.location.href = 'autos.html';
+        }, 1000);
+
 
     }
 

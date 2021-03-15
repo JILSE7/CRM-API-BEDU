@@ -56,7 +56,9 @@ import { mostrarAlerta, validar } from './funciones.js'
         //rescribe el objeto
         editarSoli(solicitud, idSolicitud);
 
-
+        setTimeout(() => {
+            window.location.href = 'solicitudes.html';
+        }, 1000);
 
     }
 
