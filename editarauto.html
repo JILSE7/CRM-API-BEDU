@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRM - JSONServer</title>
+    <link rel="stylesheet" href="css/autos.css">
+    <link rel="stylesheet" href="css/tailwind.min.css">
+</head>
+
+<body class="min-h-100 bg-gray-200">
+    <aside class="side">
+        <h1 class="uppercase text-white tracking-wide text-2xl  font-bold mt-2">CRM - CARBEDU-API</h1>
+        <p class="mt-10 text-white">Autos en venta</p>
+        <nav class=" nav">
+            <ul class="menu">
+                <li>
+                    <a href="/" class="px-3 py-1 enlace">Usuario</a>
+                    <ul>
+                        <li><a href="nuevo-cliente.html" class="px-3 py-1 enlace">Nuevo Usuario</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="autos.html" class="px-3 py-1 enlace">Venta de autos</a>
+                    <ul>
+                        <li><a href="nuevo-auto.html" class="px-3 py-1 enlace">Crear auto</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="solicitudes.html" class="px-3 py-1 enlace">Solicitudes</a>
+                    <ul>
+                        <li><a href="nueva-solicitud.html" class="px-3 py-1 enlace">Nueva Solicitud</a></li>
+                    </ul>
+                </li>
+            </ul>
+    </aside>
+    <!--sidebar-->
+    <main class="md:w-5/5  xl:w-5/5 px-5 py-10 bg-gray-200">
+        <h2 class="text-3xl font-light text-center">Editar Auto</h2>
+
+        <div class="flex flex-col mt-10 items-center">
+            <div class="-my-2 py-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8 w-10/12 md:w-8/12 lg:w-6/12">
+                <div class=" shadow overflow-hidden sm:rounded-lg border-b border-gray-200 ">
+                    <form id="formulario" class="bg-white p-3" method="POST">
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="marca">Marca</label>
+                            <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="make" name="make" type="text" placeholder="Marca" />
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="modelo">Modelo</label>
+                            <input class="appearance-none border rounded w-full my-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="model" name="model" type="text" placeholder="Modelo" />
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="version">Version</label>
+                            <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="version" name="version" type="text" placeholder="Version" />
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="año">Año</label>
+                            <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="year" name="year" type="text" placeholder="Año" />
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="telefono">Kilometraje</label>
+                            <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="mileage" name="mileage" type="tel" placeholder="Kilometraje" />
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="empresa">Cambios</label>
+                            <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="drivetrain" name="drivetrain" type="text" placeholder="Manual o Automatico" />
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="empresa">Tipo</label>
+                            <select name="chasisType" id="chasisType">
+                                <option >selecione</option>
+                            <option value="Coupe">Coupe</option>
+                            <option value="Sedan">Sedan</option>
+                            <option value="Hatchback">Hatchback</option>
+                            <option value="Roadster">Roadster</option>
+                            <option value="SUV">SUV</option>
+                            <option value="Minivan">Minivan</option>
+                            <option value="Sportscar">Sportscar</option>
+                            <option value="pickup">pickup</option>
+                            <option value="Other">Other</option>
+                           </select>
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="empresa">Color</label>
+                            <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="color" name="color" type="text" placeholder="Color" />
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="empresa">Descripcion</label>
+                            <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="description" name="description" type="text" placeholder="Breve descripcion" />
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="empresa">Precion</label>
+                            <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="price" name="price" type="text" placeholder="Precio" />
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="empresa">Id vendedor</label>
+                            <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="advertiserId" name="advertiserId" type="text" placeholder="Tu Id" />
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="empresa">Foto</label>
+                            <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="photos" name="photos" type="text" placeholder="PEGA UN LINK, SIMULA UNA CARGA" />
+                        </div>
+
+
+                        <input type="submit" class="bg-purple-600 hover:bg-purple-900 w-full mt-5 p-2 text-white uppercase font-bold" value="Guardar Informacion" />
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </main>
+    </div>
+
+    <script src="js/editarauto.js" type="module"></script>
+</body>
+
+</html>
